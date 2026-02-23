@@ -39,15 +39,68 @@
             });
 
             // apply default elements
+            $container.load("res/layout/main.html", function () {
 
 
+                $(".WBD_mainContainer #window").load("res/layout/window.html", function () {
+                    // Window UI Loaded
+
+                    // Callbacks
+                    // Edit title on click
+                    $(".WBD_mainContainer").on("click", "#window #title", function () {
+
+                        var $title = $(this);
+
+                        // Prevent creating multiple inputs
+                        if ($title.find("input").length) return;
+
+                        var currentText = $title.text();
+
+                        var $input = $("<input>", {
+                            type: "text",
+                            id: "WBD_windowsTitleInput",
+                            value: currentText
+                        });
+
+                        $title.empty().append($input);
+                        $input.focus();
+
+                        // Save on Enter
+                        $input.on("keydown", function (e) {
+                            if (e.key === "Enter") {
+                                $title.text($(this).val());
+                            }
+                        });
+
+                        // Save on blur (click outside)
+                        $input.on("blur", function () {
+                            $title.text($(this).val());
+                        });
+
+                        //select all
+                        $input.select();
+
+                    });
+
+                    console.log("WebBasicDesigner window UI initialized", settings);
+                });
+
+                $(".WBD_mainContainer #toolbox").load("res/layout/toolbox.html", function () {
+                    // Toolbox UI Loaded
+
+                    console.log("WebBasicDesigner toolbox UI initialized", settings);
+                });
+
+                $(".WBD_mainContainer #properties").load("res/layout/properties.html", function () {
+                    // Properties UI Loaded
+
+                    console.log("WebBasicDesigner properties UI initialized", settings);
+                });
 
 
-
-
-
-
-
+                //console.log("WebBasicDesigner initialized", settings);
+            
+            });
         }
 
     };

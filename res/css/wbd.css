@@ -23,6 +23,22 @@
     align-items: center;
     padding: 0 10px;
 }
+
+#window #title input {
+    display: block;
+    background: transparent;
+    white-space: pre;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .WBD_mainContainer #window #innerContent {
     align-items: center;
 
