@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebBasicDesigner - Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #2e2e2e;
+            font-family: Segoe UI, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Fake VB Window */
+        .window {
+            width: 820px;
+            background: #c0c0c0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid #808080;
+        }
+
+        .titlebar {
+            height: 28px;
+            background: linear-gradient(to right, #0a246a, #3a6ea5);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Designer Surface */
+        #designer {
+            width: 800px;
+            height: 600px;
+            background: white;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="window">
+        <div class="titlebar">
+            WebBasicDesigner - Example Form
+        </div>
+
+        <div id="designer">
+            <!-- Your controls will be injected here -->
+        </div>
+    </div>
+
+    <!-- Your JS entry point -->
+    <script type="module" src="../src/main.js"></script>
+
+</body>
+</html>
