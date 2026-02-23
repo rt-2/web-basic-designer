@@ -71,7 +71,6 @@
             /* PROBLEM END */
 
 
-            console.log("WebBasicDesigner initialized", settings);
         }
 
     };
