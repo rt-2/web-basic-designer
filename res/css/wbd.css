@@ -1,6 +1,6 @@
 
 /* Fake VB Window */
-.WBD_mainContainer #window {
+#window {
     display: inline-block;
     position: relative;
     width: 480px;
@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 
-.WBD_mainContainer #window #titlebar {
+#window #title {
     height: 28px;
     background: linear-gradient(to right, #0a246a, #3a6ea5);
     align-items: center;
@@ -44,3 +44,4 @@
     font-size: 16px;
     font-weight: bold;
 }
+
