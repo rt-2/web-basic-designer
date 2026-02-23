@@ -7,7 +7,7 @@
 
     const WebBasicDesigner = {
 
-        version: "0.0.2",
+        version: "0.0.3",
 
         config: {
             width: 800,
@@ -27,15 +27,36 @@
                 return;
             }
 
+            $container.addClass("WBD_mainContainer");
+
             this.config = settings;
             this.$container = $container;
 
             // Apply dimensions via jQuery
             $container.css({
                 width: settings.width,
-                height: settings.height,
-                position: "relative"
+                height: settings.height
             });
+
+            // apply default elements
+            //.window
+            const $window = $("<div>", {
+                class: "window"
+            });
+            //.titlebar
+            const $titlebar = $("<div>", {
+                class: "titlebar",
+                text: "WebBasicDesigner - Example Form"
+            });
+            //.innerContent
+            const $innerContent = $("<div>", {
+                id: "innerContent"
+            });
+
+            $window.append($titlebar);
+            $window.append($innerContent);
+            $container.append($window);
+
 
             console.log("WebBasicDesigner initialized", settings);
         }

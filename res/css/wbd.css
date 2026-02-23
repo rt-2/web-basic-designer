@@ -1,0 +1,28 @@
+
+/* Fake VB Window */
+.WBD_mainContainer .window {
+    width: 820px;
+    background: #c0c0c0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid #808080;
+}
+
+.WBD_mainContainer .titlebar {
+    height: 28px;
+    background: linear-gradient(to right, #0a246a, #3a6ea5);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Designer Surface */
+.WBD_mainContainer .WBD_mainContainer {
+    background: white;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #999;
+}

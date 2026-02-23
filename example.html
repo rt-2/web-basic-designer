@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebBasicDesigner - Test</title>
+
+	<!-- Style(s) -->
+	<link rel="stylesheet" type="text/css" href="res/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="res/css/wbd.css" />
+		
+    <style>
+        /* Designer Surface */
+        #designer {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+	
+	<!-- Dependencie(s) -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="WebBasicDesigner.js"></script>
+	
+	<!-- Scripts(s) -->
+    <script>
+        $(document).ready(function () {
+
+            WebBasicDesigner.init("wbd", {width: 800, height: 600});
+
+        });
+    </script>
+</head>
+<body>
+    <div id="mainContainer">
+
+
+        <div id="wbd">
+            <!-- Your controls will be injected here -->
+        </div>
+
+    </div>
+</body>
+</html>
